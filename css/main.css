@@ -18,7 +18,6 @@ body{
   text-align: center;
   position: relative;
 }
-
 ul li{
   list-style-type: none;
   display: inline;
@@ -27,7 +26,6 @@ ul li{
 @font-face {
   font-family: monospace;
 }
-
 div, li, p{
   font-family: monospace;
   font-size: 20px;
