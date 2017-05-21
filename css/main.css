@@ -9,8 +9,9 @@ height: 250px;
 }
 body{
   background: url(images/grid-layout.jpg) top left repeat;
-  padding: 20px 0 20px 0;
+  padding: 16px 0 16px 0;
   margin: 10% auto 10% auto;
+  width: 50%;
   /*margin: 90px auto 90px auto;*/
   /*border: 5px solid #FF0000;*/
   text-align: center;
