@@ -6,6 +6,8 @@
 background: /*url(blah.jpg)*/ 50% 50% no-repeat; /* 50% 50% centers image in div */
 width: 250px;
 height: 250px;
+border-radius: 50%;
+border : 2px solid #000000;
 }
 body{
   background: url(images/grid-layout.jpg) top left repeat;
@@ -13,15 +15,10 @@ body{
   margin: 10% auto 10% auto;
   width: 760px;
   /*margin: 90px auto 90px auto;*/
-  /*border: 5px solid #FF0000;*/
   text-align: center;
   position: relative;
 }
-div img{
-  /*padding: 10px 10px 10px 10px;*/
-  border-radius: 50%;
-  border : 2px solid #000000;
-}
+
 ul li{
   list-style-type: none;
   display: inline;
