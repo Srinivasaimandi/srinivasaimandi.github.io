@@ -10,7 +10,8 @@ height: 250px;
 body{
   background: url(images/grid-layout.jpg) top left repeat;
   padding: 20px 0 20px 0;
-  margin: 90px auto 90px auto;
+  margin: 10% auto 10% auto;
+  /*margin: 90px auto 90px auto;*/
   /*border: 5px solid #FF0000;*/
   text-align: center;
 }
