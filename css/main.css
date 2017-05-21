@@ -15,6 +15,7 @@ body{
   /*margin: 90px auto 90px auto;*/
   /*border: 5px solid #FF0000;*/
   text-align: center;
+  position: relative;
 }
 div img{
   /*padding: 10px 10px 10px 10px;*/
