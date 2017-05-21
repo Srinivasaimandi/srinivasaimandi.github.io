@@ -2,13 +2,22 @@
 .main-content{
   text-align: center;
 }
+.thumb1 {
+background: url(blah.jpg) 50% 50% no-repeat; /* 50% 50% centers image in div */
+width: 250px;
+height: 250px;
+}
 body{
   padding: 20px 0 20px 0;
-  margin: 250px auto 250px auto;
-  border: 5px solid #FF0000;
+  margin: 100px auto 100px auto;
+  /*border: 5px solid #FF0000;*/
   text-align: center;
 }
-
+div img{
+  /*padding: 10px 10px 10px 10px;*/
+  border-radius: 50%;
+  border : 2px solid #000000;
+}
 ul li{
   list-style-type: none;
   display: inline;
