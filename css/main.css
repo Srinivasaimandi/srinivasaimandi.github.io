@@ -17,6 +17,7 @@ body{
   /*margin: 90px auto 90px auto;*/
   text-align: center;
   position: relative;
+  display: flex;
 }
 ul li{
   list-style-type: none;
