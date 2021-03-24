@@ -1,7 +1,5 @@
 body {
-  /* font-family: monospace; */
   font-family: "Montserrat", sans-serif;
-  /* font-size: 50px; */
   margin: 0;
   align-items: center;
   text-align: center;
@@ -10,11 +8,6 @@ body {
 .myName {
   color: #00b8a9;
   padding-bottom: 0px;
-}
-
-.heading {
-  font-size: 50px;
-  padding: 10px;
 }
 
 #section1 {
