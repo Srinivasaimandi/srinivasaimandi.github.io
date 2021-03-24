@@ -1,19 +1,32 @@
 body {
   /* font-family: monospace; */
   font-family: "Montserrat", sans-serif;
-  font-size: 50px;
+  /* font-size: 50px; */
   margin: 0;
-}
-
-#section_1 {
-  margin-top: 20%;
-  margin-bottom: 20%;
-  margin-left: 12%;
-  margin-right: 0px;
-
-  text-align: left;
+  align-items: center;
+  text-align: center;
 }
 
 .myName {
   color: #00b8a9;
+}
+
+.heading {
+  font-size: 50px;
+  padding: 10px;
+}
+
+#section1 {
+  margin-top: 6%;
+  margin-bottom: 6%;
+  margin-left: 18%;
+  margin-right: 6px;
+  text-align: left;
+}
+.pictureSty {
+  width: 350px;
+  height: 350px;
+  border-radius: 10%;
+  align-items: right;
+  border: 1px solid grey;
 }
