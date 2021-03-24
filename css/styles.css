@@ -1,14 +1,19 @@
 body {
-  font-family: monospace;
-  font-size: 18px;
+  /* font-family: monospace; */
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  margin: 0;
 }
+
+#section_1 {
+  margin-top: 20%;
+  margin-bottom: 20%;
+  margin-left: 12%;
+  margin-right: 0px;
+
+  text-align: left;
+}
+
 .myName {
-  font-size: 25px;
-}
-.thumb {
-  background: /*url(blah.jpg)*/ 50% 50% no-repeat; /* 50% 50% centers image in div */
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  border: 2px solid #2e2e2e;
+  color: #00b8a9;
 }

@@ -1,0 +1,14 @@
+body {
+  font-family: monospace;
+  font-size: 18px;
+}
+.myName {
+  font-size: 25px;
+}
+.thumb {
+  background: /*url(blah.jpg)*/ 50% 50% no-repeat; /* 50% 50% centers image in div */
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 2px solid #2e2e2e;
+}
