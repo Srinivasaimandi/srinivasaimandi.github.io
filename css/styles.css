@@ -11,6 +11,8 @@ body {
   margin-left: 18%;
   margin-right: 10px;
   text-align: left;
+  font-family: "Montserrat", sans-serif;
+  color: black;
 }
 .pictureSty {
   width: 350px;
