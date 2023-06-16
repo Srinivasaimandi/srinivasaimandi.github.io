@@ -11,11 +11,12 @@ a:hover {
 #mainDiv {
   height: 100%;
   width: 100%;
-  padding: 48px 1px;
+  padding: 30px 1px;
 }
 
 #nameDiv {
   font-size: 3.7vw;
+  padding-top: 15px;
   /* font-size: 40pt; */
 }
 
@@ -28,6 +29,7 @@ a:hover {
   padding-left: 30%;
   padding-right: 30%;
   padding-bottom: 1%;
+  background-color: black;
 }
 
 .fontStyle {
