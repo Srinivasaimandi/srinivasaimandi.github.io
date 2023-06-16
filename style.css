@@ -11,7 +11,7 @@ a:hover {
 #mainDiv {
   height: 100%;
   width: 100%;
-  padding: 30px 1px;
+  padding: 0px 1px 0px 1px;
 }
 
 #nameDiv {
@@ -26,9 +26,8 @@ a:hover {
 }
 
 #imageDiv {
-  padding-left: 30%;
-  padding-right: 30%;
-  padding-bottom: 1%;
+  padding-left: 25vw;
+  padding-right: 25vw;
   background-color: black;
 }
 
