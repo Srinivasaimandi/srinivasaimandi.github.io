@@ -1,0 +1,39 @@
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4f709c;
+  font-weight: bold;
+}
+
+#mainDiv {
+  height: 100%;
+  width: 100%;
+  padding: 48px 1px;
+}
+
+#nameDiv {
+  font-size: 3.7vw;
+  /* font-size: 40pt; */
+}
+
+#descDiv {
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+#imageDiv {
+  padding-left: 30%;
+  padding-right: 30%;
+  padding-bottom: 1%;
+}
+
+.fontStyle {
+  text-align: left;
+  padding-left: 20%;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+  font-weight: 500;
+}
