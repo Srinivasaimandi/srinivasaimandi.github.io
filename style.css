@@ -33,6 +33,8 @@ a:hover {
   padding-left: 29vw;
   padding-right: 27vw;
   background-color: black;
+  height: 450px;
+  overflow: hidden;
 }
 
 .fontStyle {
