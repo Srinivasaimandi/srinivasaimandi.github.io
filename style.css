@@ -14,6 +14,13 @@ a:hover {
 }
 
 #floatingDiv {
+  border: 5px solid white;
+  position: fixed;
+  top: 30%;
+  left: 92%;
+  background-color: white;
+  height: 200px;
+  width: 20px;
 }
 
 #imageDiv {
