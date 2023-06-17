@@ -13,20 +13,7 @@ a:hover {
   font-weight: bold;
 }
 
-#mainDiv {
-  height: 100%;
-  width: 100%;
-  padding: 0px 1px 0px 1px;
-}
-
-#nameDiv {
-  font-size: 3.43vw;
-  padding-top: 3%;
-  /* font-size: 40pt; */
-}
-
-#descDiv {
-  font-size: 1.5vw;
+#floatingDiv {
 }
 
 #imageDiv {
@@ -43,4 +30,20 @@ a:hover {
   font-family: "Courier New", Courier, monospace;
   font-size: 30px;
   font-weight: 500;
+}
+
+#mainDiv {
+  height: 100%;
+  width: 100%;
+  padding: 0px 1px 0px 1px;
+}
+
+#nameDiv {
+  font-size: 3.43vw;
+  padding-top: 3%;
+  /* font-size: 40pt; */
+}
+
+#descDiv {
+  font-size: 1.5vw;
 }
