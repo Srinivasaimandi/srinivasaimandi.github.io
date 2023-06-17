@@ -13,24 +13,6 @@ a:hover {
   font-weight: bold;
 }
 
-#floatingDiv {
-  border: 5px solid white;
-  position: fixed;
-  top: 30%;
-  left: 92%;
-  background-color: white;
-  height: 200px;
-  width: 20px;
-}
-
-#imageDiv {
-  padding-left: 25vw;
-  padding-right: 25vw;
-  background-color: black;
-  height: 450px;
-  overflow: hidden;
-}
-
 .fontStyle {
   text-align: left;
   padding-left: 20%;
@@ -39,10 +21,25 @@ a:hover {
   font-weight: 500;
 }
 
+img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/*
+  styles for all div containers
+*/
+#imageDiv {
+  background-color: black;
+  height: 450px;
+  width: auto;
+  overflow: hidden;
+}
+
 #mainDiv {
   height: 100%;
   width: 100%;
-  padding: 0px 1px 0px 1px;
 }
 
 #nameDiv {
