@@ -1,15 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    
     <title>Srinivasa Rao Imandi</title>
-</head>
-<body>  
-    <img class="thumb" src="./images/srinivas.jpg" alt="srinivasa rao imandi's picture" width="200px">
-    <p class="myName">Srinivasa Rao Imandi</p>
-    <p>test lead at <a href="https://www.encora.com/" target="window">encora</a> & an amateur table tennins player.</p>
-</body>
+  </head>
+  <body>
+    <div class="container" id="section1">
+      <img
+      class="pictureSty"
+      src="./images/srinivas.jpg"
+      alt="srinivas-image"
+      />
+    <p id="data-title">Hi, I'm <span class="myName">Srinivasa Rao Imandi</span></p>
+
+    <p id="data-body">I build scripts which help test Web Apps faster using <ins class="eraseWrite" id="text">Selenium with Java</ins>
+      <br>I'm currently helping <a href="https://www.matellio.com/" target="window">Matellio</a> 
+      achieve it's goals as a QA Automation Lead
+      <br>Take a peek at my <a href="https://www.linkedin.com/in/srinivasaimandi" target="window">LinkedIn</a> profile
+      <!-- into my <a href="./docs/simandi.pdf" target="window">resume</a> to learn more about me.</p>-->
+    </div>
+    </div>
+    <script type="text/javascript">
+
+// List of sentences
+var _CONTENT = ["Selenium with Java" , "Jasmine with Protractor", "Taiko with Gauge", "Jest with Puppeteer", "Rest Assured with Java", "Axios with JavaScript", "Postman with JavaScript", "Zalenium", "Jenkins" ];
+
+// Current sentence being processed
+var _PART = 0;
+
+// Character number of the current sentence being processed 
+var _PART_INDEX = 0;
+
+// Holds the handle returned from setInterval
+var _INTERVAL_VAL;
+
+// Element that holds the text
+var _ELEMENT = document.querySelector("#text");
+
+// Implements typing effect
+function Type() { 
+	var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+	_ELEMENT.innerHTML = text;
+	_PART_INDEX++;
+
+	// If full sentence has been displayed then start to delete the sentence after some time
+	if(text === _CONTENT[_PART]) {
+		clearInterval(_INTERVAL_VAL);
+		setTimeout(function() {
+			_INTERVAL_VAL = setInterval(Delete, 50);
+		}, 1000);
+	}
+}
+
+// Implements deleting effect
+function Delete() {
+	var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+	_ELEMENT.innerHTML = text;
+	_PART_INDEX--;
+
+	// If sentence has been deleted then start to display the next sentence
+	if(text === '') {
+		clearInterval(_INTERVAL_VAL);
+
+		// If last sentence then display the first one, else move to the next
+		if(_PART == (_CONTENT.length - 1))
+			_PART = 0;
+		else
+			_PART++;
+		_PART_INDEX = 0;
+
+		// Start to display the next sentence after some time
+		setTimeout(function() {
+			_INTERVAL_VAL = setInterval(Type, 100);
+		}, 200);
+	}
+}
+
+// Start the typing effect on load
+_INTERVAL_VAL = setInterval(Type, 100);
+
+</script>
+  </body>
 </html>
