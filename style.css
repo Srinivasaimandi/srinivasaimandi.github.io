@@ -75,4 +75,13 @@ img {
     width: auto;
     overflow: hidden;
   }
+  #nameDiv {
+    font-size: 4.5vw;
+  }
+  #descDiv {
+    font-size: 2vw;
+  }
+  .fontStyle {
+    padding-left: 12%;
+  }
 }
