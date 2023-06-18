@@ -1,0 +1,87 @@
+html,
+body {
+  margin: 0;
+}
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4f709c;
+  font-weight: bold;
+}
+
+.fontStyle {
+  text-align: left;
+  padding-left: 20%;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/*
+  styles for all div containers
+*/
+#imageDiv {
+  background-color: black;
+  height: 450px;
+  width: auto;
+  overflow: hidden;
+}
+
+#mainDiv {
+  height: 100%;
+  width: 100%;
+}
+
+#nameDiv {
+  font-size: 3.43vw;
+  padding-top: 3%;
+  /* font-size: 40pt; */
+}
+
+#descDiv {
+  font-size: 1.5vw;
+}
+
+@media (min-width: 481px) and (max-width: 1200px) {
+  #nameDiv {
+    font-size: 4.5vw;
+  }
+  #descDiv {
+    font-size: 2.2vw;
+  }
+  .fontStyle {
+    padding-left: 12%;
+  }
+}
+
+@media (min-width: 319px) and (max-width: 480px) {
+  img {
+    height: auto;
+    width: 440px;
+  }
+  #imageDiv {
+    background-color: black;
+    height: 250px;
+    width: auto;
+    overflow: hidden;
+  }
+  #nameDiv {
+    font-size: 4.5vw;
+  }
+  #descDiv {
+    font-size: 2vw;
+  }
+  .fontStyle {
+    padding-left: 12%;
+  }
+}
