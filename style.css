@@ -35,9 +35,9 @@ img {
 }
 
 #otherContent {
-  font-size: xx-large;
+  font-size: 3vw;
   margin: auto;
-  padding-left: 46%;
+  padding-left: 50%;
   animation: blinker 1s linear infinite;
 }
 
