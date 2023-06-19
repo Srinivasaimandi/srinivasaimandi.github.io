@@ -4,8 +4,12 @@ body {
   background-color: white;
 }
 
-a,
-span {
+#mainDiv {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.color-red {
   color: #cc3636;
 }
 
@@ -17,12 +21,20 @@ a:hover {
   font-weight: bold;
 }
 
-.fontStyle {
-  text-align: left;
-  padding-left: 20%;
+.fontstyle {
   font-family: "Courier New", Courier, monospace;
-  font-size: 30px;
-  font-weight: 500;
+}
+
+.titlefont {
+  font-size: 3.43vw;
+}
+
+.sidetitlefont {
+  font-size: 2.2vw;
+}
+
+.descfont {
+  font-size: 1.5vw;
 }
 
 img {
@@ -41,17 +53,11 @@ img {
   overflow: hidden;
 }
 
-#mainDiv {
-  height: 100%;
-  width: 100%;
-}
-
 #nameDiv {
-  font-size: 3.43vw;
   padding-top: 3%;
-  /* font-size: 40pt; */
 }
 
-#descDiv {
-  font-size: 1.5vw;
+footer {
+  text-align: center;
+  font-size: 1.2vw;
 }
