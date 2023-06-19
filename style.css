@@ -1,7 +1,7 @@
 html,
 body {
   margin: 0;
-  /* background-color: #e3e2e1; */
+  background-color: white;
 }
 
 a {
@@ -62,6 +62,9 @@ img {
   padding-top: 20px;
 }
 
+span {
+  color: #cc3636;
+}
 /*
 media queries for tablet and mobile resolution commented for now*/
 /* @media (min-width: 481px) and (max-width: 1200px) {
