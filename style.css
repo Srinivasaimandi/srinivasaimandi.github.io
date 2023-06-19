@@ -5,7 +5,8 @@ body {
 }
 
 #mainDiv {
-  padding-left: 20%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .color-red {
@@ -21,7 +22,6 @@ a:hover {
 }
 
 .fontstyle {
-  text-align: left;
   font-family: "Courier New", Courier, monospace;
 }
 
@@ -35,10 +35,6 @@ a:hover {
 
 .descfont {
   font-size: 1.5vw;
-}
-
-.footerfont {
-  font-size: 1.2vw;
 }
 
 img {
@@ -59,4 +55,9 @@ img {
 
 #nameDiv {
   padding-top: 3%;
+}
+
+footer {
+  text-align: center;
+  font-size: 1.2vw;
 }
