@@ -55,14 +55,15 @@ img {
 
 #navBar {
   display: flex;
-  gap: 30px;
+  gap: 55px;
   font-size: 1.8vw;
-  padding-left: 23%;
+  padding-left: 20%;
 }
 
-/* #navBar > * {
-  flex-basis: 0px;
-} */
+hr {
+  border-style: inset;
+  border-width: 0.2px;
+}
 
 @media (min-width: 481px) and (max-width: 1200px) {
   #nameDiv {
@@ -77,9 +78,9 @@ img {
   }
   #navBar {
     display: flex;
-    gap: 30px;
+    gap: 55px;
     font-size: 2.2vw;
-    padding-left: 15%;
+    padding-left: 10%;
   }
 }
 
