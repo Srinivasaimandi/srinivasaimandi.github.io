@@ -1,7 +1,7 @@
 html,
 body {
   margin: 0;
-  background-color: #cfcfcf;
+  background-color: #e3e2e1;
 }
 
 a {
@@ -53,15 +53,33 @@ img {
   font-size: 1.5vw;
 }
 
+#navBar {
+  display: flex;
+  gap: 30px;
+  font-size: 1.8vw;
+  padding-left: 23%;
+}
+
+/* #navBar > * {
+  flex-basis: 0px;
+} */
+
 @media (min-width: 481px) and (max-width: 1200px) {
   #nameDiv {
     font-size: 4.5vw;
   }
   #descDiv {
     font-size: 2.2vw;
+    padding-left: 9%;
   }
   .fontStyle {
     padding-left: 12%;
+  }
+  #navBar {
+    display: flex;
+    gap: 30px;
+    font-size: 2.2vw;
+    padding-left: 15%;
   }
 }
 
@@ -84,5 +102,11 @@ img {
   }
   .fontStyle {
     padding-left: 12%;
+  }
+  #navBar {
+    display: flex;
+    gap: 30px;
+    font-size: 2vw;
+    padding-left: 13%;
   }
 }
