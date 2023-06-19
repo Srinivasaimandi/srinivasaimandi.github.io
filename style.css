@@ -4,20 +4,22 @@ body {
   background-color: white;
 }
 
-a {
+a,
+span {
   color: #cc3636;
+}
+
+a {
   text-decoration: none;
 }
 
 a:hover {
-  color: #cc3636;
   font-weight: bold;
 }
 
 .fontStyle {
   text-align: left;
   padding-left: 20%;
-  /* font-family: "Courier Prime", monospace; */
   font-family: "Courier New", Courier, monospace;
   font-size: 30px;
   font-weight: 500;
@@ -53,63 +55,3 @@ img {
 #descDiv {
   font-size: 1.5vw;
 }
-
-#navBar {
-  display: flex;
-  gap: 55px;
-  font-size: 1.8vw;
-  padding-left: 17%;
-  padding-top: 20px;
-}
-
-span {
-  color: #cc3636;
-}
-/*
-media queries for tablet and mobile resolution commented for now*/
-/* @media (min-width: 481px) and (max-width: 1200px) {
-  #nameDiv {
-    font-size: 4.5vw;
-  }
-  #descDiv {
-    font-size: 2.2vw;
-    padding-left: 9%;
-  }
-  .fontStyle {
-    padding-left: 12%;
-  }
-  #navBar {
-    display: flex;
-    gap: 55px;
-    font-size: 2.2vw;
-    padding-left: 10%;
-  }
-}
-
-@media (min-width: 319px) and (max-width: 480px) {
-  img {
-    height: auto;
-    width: 440px;
-  }
-  #imageDiv {
-    background-color: black;
-    height: 250px;
-    width: auto;
-    overflow: hidden;
-  }
-  #nameDiv {
-    font-size: 4.5vw;
-  }
-  #descDiv {
-    font-size: 2vw;
-  }
-  .fontStyle {
-    padding-left: 12%;
-  }
-  #navBar {
-    display: flex;
-    gap: 18px;
-    font-size: 2vw;
-    padding-left: 13%;
-  }
-} */
