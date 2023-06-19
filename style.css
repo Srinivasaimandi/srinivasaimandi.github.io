@@ -1,7 +1,7 @@
 html,
 body {
   margin: 0;
-  background-color: #e3e2e1;
+  /* background-color: #e3e2e1; */
 }
 
 a {
@@ -27,19 +27,6 @@ img {
   margin-left: auto;
   margin-right: auto;
   display: block;
-}
-
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
-}
-
-#otherContent {
-  font-size: 3vw;
-  margin: auto;
-  padding-left: 50%;
-  animation: blinker 1s linear infinite;
 }
 
 /*
