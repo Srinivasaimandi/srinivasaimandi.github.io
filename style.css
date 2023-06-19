@@ -17,6 +17,7 @@ a:hover {
 .fontStyle {
   text-align: left;
   padding-left: 20%;
+  /* font-family: "Courier Prime", monospace; */
   font-family: "Courier New", Courier, monospace;
   font-size: 30px;
   font-weight: 500;
@@ -70,7 +71,7 @@ img {
   display: flex;
   gap: 55px;
   font-size: 1.8vw;
-  padding-left: 20%;
+  padding-left: 17%;
 }
 
 hr {
@@ -78,7 +79,9 @@ hr {
   border-width: 0.2px;
 }
 
-@media (min-width: 481px) and (max-width: 1200px) {
+/*
+media queries for tablet and mobile resolution commented for now*/
+/* @media (min-width: 481px) and (max-width: 1200px) {
   #nameDiv {
     font-size: 4.5vw;
   }
@@ -119,8 +122,8 @@ hr {
   }
   #navBar {
     display: flex;
-    gap: 30px;
+    gap: 18px;
     font-size: 2vw;
     padding-left: 13%;
   }
-}
+} */
