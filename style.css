@@ -75,11 +75,6 @@ img {
   padding-top: 20px;
 }
 
-hr {
-  border-style: inset;
-  border-width: 0.2px;
-}
-
 /*
 media queries for tablet and mobile resolution commented for now*/
 /* @media (min-width: 481px) and (max-width: 1200px) {
