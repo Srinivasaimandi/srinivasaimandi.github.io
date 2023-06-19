@@ -28,6 +28,19 @@ img {
   display: block;
 }
 
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+#otherContent {
+  font-size: xx-large;
+  margin: auto;
+  padding-left: 46%;
+  animation: blinker 1s linear infinite;
+}
+
 /*
   styles for all div containers
 */
