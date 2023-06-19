@@ -5,12 +5,12 @@ body {
 }
 
 a {
-  color: #337ab7;
+  color: #cc3636;
   text-decoration: none;
 }
 
 a:hover {
-  color: #4f709c;
+  color: #cc3636;
   font-weight: bold;
 }
 
