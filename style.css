@@ -48,16 +48,23 @@ img {
 */
 #imageDiv {
   background-color: black;
-  height: 450px;
+  height: 400px;
   width: auto;
   overflow: hidden;
 }
 
 #nameDiv {
-  padding-top: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 footer {
   text-align: center;
   font-size: 1.2vw;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+hr {
+  width: 0px;
 }
