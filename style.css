@@ -58,6 +58,10 @@ img {
   padding-bottom: 1%;
 }
 
+#descDiv {
+  padding-top: 10px;
+}
+
 footer {
   text-align: center;
   font-size: 1.2vw;
@@ -66,5 +70,6 @@ footer {
 }
 
 hr {
-  width: 0px;
+  width: auto;
+  border: 1px solid #cc3636;
 }
