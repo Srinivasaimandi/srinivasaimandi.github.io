@@ -2,13 +2,12 @@ html,
 body {
   margin: 0;
   background-color: white;
+  font-family: "Courier New", Courier, monospace;
 }
 
-#mainDiv {
-  margin-left: 20%;
-  margin-right: 20%;
-}
-
+/*
+hyperlink decoration
+*/
 .color-red {
   color: #cc3636;
 }
@@ -17,12 +16,12 @@ a {
   text-decoration: none;
 }
 
-.fontstyle {
-  font-family: "Courier New", Courier, monospace;
-}
+/*
+fonts
+*/
 
 .titlefont {
-  font-size: 3.43vw;
+  font-size: 3.3em;
 }
 
 .sidetitlefont {
@@ -33,39 +32,54 @@ a {
   font-size: 1.5vw;
 }
 
+/*
+  styles for all div containers
+*/
+
 img {
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
-/*
-  styles for all div containers
-*/
 #imageDiv {
   background-color: black;
   height: 400px;
   width: auto;
   overflow: hidden;
+  margin: 0;
 }
 
 #nameDiv {
   padding-top: 1%;
-  padding-bottom: 1%;
 }
 
-#descDiv {
-  padding-top: 10px;
-}
-
-footer {
+.footer {
   text-align: center;
   font-size: 1.2vw;
-  padding-top: 30px;
-  padding-bottom: 10px;
+}
+
+/*
+new changes
+*/
+
+.container {
+  display: grid;
+  grid-template-rows: 2fr auto;
+  grid-template-columns: 1fr;
+}
+
+.container-item {
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-top: 3px;
 }
 
 hr {
   width: auto;
   border: 1px solid #cc3636;
+}
+
+#footerDiv {
+  padding-top: 5px;
 }
