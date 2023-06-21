@@ -54,11 +54,6 @@ img {
   padding-top: 1%;
 }
 
-.footer {
-  text-align: center;
-  font-size: 1.2vw;
-}
-
 /*
 new changes
 */
@@ -66,7 +61,7 @@ new changes
 .container {
   display: grid;
   grid-template-rows: 2fr auto;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto;
 }
 
 .container-item {
@@ -82,4 +77,6 @@ hr {
 
 #footerDiv {
   padding-top: 5px;
+  text-align: center;
+  font-size: 1rem;
 }
