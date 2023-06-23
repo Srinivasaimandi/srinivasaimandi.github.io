@@ -22,7 +22,7 @@ fonts
 */
 
 .titlefont {
-  font-size: 3.3em;
+  font-size: 4.9vw;
 }
 
 .descfont {
@@ -77,7 +77,25 @@ hr {
 #footerDiv {
   padding-top: 5px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1vw;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#salutation {
+  align-self: flex-start;
+  padding-top: 4px;
+}
+
+#myname {
+  align-self: center;
+}
+
+#desc {
+  align-self: flex-end;
 }
 
 /*
