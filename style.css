@@ -3,6 +3,7 @@ body {
   margin: 0;
   background-color: white;
   font-family: "Courier New", Courier, monospace;
+  font-size: 100%;
 }
 
 /*
@@ -21,11 +22,7 @@ fonts
 */
 
 .titlefont {
-  font-size: 3.3em;
-}
-
-.sidetitlefont {
-  font-size: 2.2vw;
+  font-size: 4.9vw;
 }
 
 .descfont {
@@ -48,6 +45,8 @@ img {
   width: auto;
   overflow: hidden;
   margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 #nameDiv {
@@ -78,5 +77,35 @@ hr {
 #footerDiv {
   padding-top: 5px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1vw;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#salutation {
+  align-self: flex-start;
+  padding-top: 4px;
+}
+
+#myname {
+  align-self: center;
+}
+
+#desc {
+  align-self: flex-end;
+}
+
+/*
+media queries
+*/
+/* @media (min-width: 319px) and (max-width: 480px) { */
+@media (min-width: 481px) and (max-width: 1200px) {
+  .container-item {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 3px;
+  }
 }
