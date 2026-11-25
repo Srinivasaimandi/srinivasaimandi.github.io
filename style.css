@@ -165,14 +165,15 @@ h1 {
 
 /*
   The underline and the cursor are drawn the same way: a red bar along
-  the bottom of the span. Both spans share the same font and padding, so
+  the bottom of the span. Both spans share the same font and position, so
   the bars match in thickness and sit at exactly the same height.
 */
 .name,
 .cursor {
   --bar: max(3px, 0.08em);
-  padding-bottom: 0.1em;
-  background: linear-gradient(var(--red), var(--red)) left bottom / 100% var(--bar) no-repeat;
+  /* raise the bar from the bottom of the text box, closer to the letters */
+  background: linear-gradient(var(--red), var(--red)) left 0 bottom 0.05em / 100% var(--bar)
+    no-repeat;
 }
 
 .role {
