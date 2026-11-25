@@ -82,8 +82,16 @@ main {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   border-bottom: 1px solid var(--rule);
+  /* stays at the top of the screen while the page scrolls */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--paper);
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 .topbar .handle {
