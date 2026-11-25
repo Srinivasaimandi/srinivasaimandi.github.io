@@ -89,6 +89,18 @@ a:focus-visible {
   gap: 1.5rem;
   font-size: 0.95rem;
   font-weight: 500;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+/*
+  While the LinkedIn and GitHub buttons in the intro are on screen, the
+  same links in the top bar are hidden (see the script in index.html).
+  visibility: hidden also takes them out of the keyboard tab order.
+*/
+.topbar.hide-nav nav {
+  opacity: 0;
+  transform: translateY(-4px);
+  visibility: hidden;
 }
 
 .topbar nav a {
@@ -464,7 +476,8 @@ h1 .dot {
     opacity: 0.5;
   }
 
-  .btn {
+  .btn,
+  .topbar nav {
     transition: none;
   }
 }

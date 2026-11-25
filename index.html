@@ -155,7 +155,7 @@
             </dd>
           </div>
           <div class="group">
-            <dt>Cloud &amp; messaging</dt>
+            <dt>Cloud &amp; containers</dt>
             <dd>
               <ul class="chips">
                 <li>AWS</li>
@@ -200,5 +200,23 @@
       <span>&#169; 2023-2026 srinivasaimandi</span>
       <span>Learn. Progress. Prosper.</span>
     </footer>
+
+    <script>
+      // Hide the top bar's LinkedIn/GitHub links while the intro buttons
+      // with the same links are visible. Without this script (or in very
+      // old browsers) the top bar links simply stay visible.
+      (function () {
+        var bar = document.querySelector(".topbar");
+        var buttons = document.querySelector(".actions");
+        if (!bar || !buttons || !("IntersectionObserver" in window)) return;
+        new IntersectionObserver(
+          function (entries) {
+            bar.classList.toggle("hide-nav", entries[0].isIntersecting);
+          },
+          // buttons scrolled under the sticky bar count as not visible
+          { rootMargin: "-" + bar.offsetHeight + "px 0px 0px 0px" }
+        ).observe(buttons);
+      })();
+    </script>
   </body>
 </html>
