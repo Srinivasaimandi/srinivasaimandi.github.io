@@ -105,7 +105,7 @@ main {
 */
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
   gap: clamp(2rem, 5vw, 4rem);
   align-items: center;
   padding: clamp(2.5rem, 7vw, 5rem) 0;
@@ -134,12 +134,22 @@ main {
   color: var(--muted);
 }
 
+.intro {
+  /* lets the name size itself to this column's width */
+  container-type: inline-size;
+}
+
+/*
+  The name stays on one line: 20 characters plus the cursor at about
+  0.59em each is about 12.4em, so 7.8% of the column width always fits.
+*/
 h1 {
   margin: 0;
-  font-size: clamp(2.5rem, 6vw, 4.75rem);
-  line-height: 1.02;
-  letter-spacing: -0.02em;
+  font-size: min(7.8cqi, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .cursor {
