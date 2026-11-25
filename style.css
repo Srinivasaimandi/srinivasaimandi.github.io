@@ -101,9 +101,17 @@ a:focus-visible {
 /*
   hero
 */
+/* intro text on the left, photo on the right */
 .hero {
-  padding: clamp(2.5rem, 8vw, 6rem) 0 clamp(2rem, 5vw, 3.5rem);
-  /* lets the name size itself to the page width */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding: clamp(2.5rem, 7vw, 5rem) 0 clamp(2rem, 5vw, 3.5rem);
+}
+
+.intro {
+  /* lets the name size itself to the text column's width */
   container-type: inline-size;
 }
 
@@ -116,11 +124,11 @@ a:focus-visible {
 
 /*
   The name stays on one line. It measures about 9.5em wide in this font,
-  so 8.6% of the column width always fits.
+  so 9.4% of the text column's width always fits.
 */
 h1 {
   margin: 0;
-  font-size: min(8.6cqi, 6.4rem);
+  font-size: min(9.4cqi, 5.5rem);
   font-weight: 800;
   letter-spacing: -0.035em;
   line-height: 0.98;
@@ -131,19 +139,11 @@ h1 .dot {
   color: var(--accent);
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: end;
-  gap: clamp(1.5rem, 5vw, 4rem);
-  margin-top: clamp(1.75rem, 4vw, 2.75rem);
-}
-
 .role {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  margin: 0 0 0.875rem;
+  margin: clamp(1.5rem, 3vw, 2.25rem) 0 0.875rem;
   font-size: clamp(1.15rem, 1rem + 0.6vw, 1.5rem);
   font-weight: 700;
 }
@@ -209,16 +209,19 @@ h1 .dot {
 }
 
 /*
-  The photo is wide with the face near the top centre, so it is zoomed in
-  and cropped to the face inside a rounded square.
+  The headshot is square, so it shows in full without cropping.
 */
 .portrait {
-  width: clamp(150px, 20vw, 220px);
+  display: block;
+  width: clamp(230px, 30vw, 350px);
+  max-width: 100%;
+  height: auto;
   aspect-ratio: 1;
+  object-fit: cover;
   border-radius: 28px;
-  background: #0b0b0b url("./images/sri-black.jpeg") 51% 0% / 300% auto no-repeat;
-  filter: grayscale(1);
-  box-shadow: 0 20px 40px -24px rgba(11, 18, 32, 0.6);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: 0 20px 40px -24px rgba(11, 18, 32, 0.45);
 }
 
 /*
@@ -385,12 +388,13 @@ h1 .dot {
   small screens: photo above the text
 */
 @media (max-width: 720px) {
-  .hero-grid {
+  .hero {
     grid-template-columns: 1fr;
   }
 
   .portrait {
     grid-row: 1;
+    width: min(100%, 320px);
   }
 }
 
