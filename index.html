@@ -51,12 +51,6 @@
             <a href="https://www.quality-ai.com" target="_blank" rel="noopener"><b>QualityAI</b></a>,
             with 10 years in QA automation.
           </p>
-          <div class="actions">
-            <a class="btn primary" href="https://www.linkedin.com/in/srinivasaimandi/" target="_blank" rel="noopener"
-              >View LinkedIn profile <span aria-hidden="true">&rarr;</span></a
-            >
-            <a class="btn ghost" href="https://github.com/Srinivasaimandi" target="_blank" rel="noopener">GitHub</a>
-          </div>
         </div>
         <img class="portrait" src="./images/headshot.jpg" alt="Portrait of Srinivasa Rao Imandi" width="800" height="800" />
       </section>
@@ -88,6 +82,56 @@
             <h2>QualityAI</h2>
           </li>
         </ol>
+      </section>
+
+      <section class="project" aria-labelledby="project-title">
+        <div class="pipe-head">
+          <span><b>featured.project</b> &middot; personal project</span>
+          <span>TypeScript &middot; Playwright MCP &middot; Claude Code</span>
+        </div>
+        <div class="project-grid">
+          <div>
+            <h2 id="project-title">AI-Augmented Playwright Framework</h2>
+            <p class="project-lede">
+              A Playwright framework where Claude Code agents turn acceptance criteria into tests,
+              and repair broken tests without hiding real bugs.
+            </p>
+            <a
+              class="btn primary"
+              href="https://github.com/Srinivasaimandi/playwright-automation-demo"
+              target="_blank"
+              rel="noopener"
+              >View on GitHub <span aria-hidden="true">&rarr;</span></a
+            >
+          </div>
+          <ul class="highlights">
+            <li>A Claude Code command turns acceptance criteria into Playwright tests, with an approval gate.</li>
+            <li>Writer and healer agents use Playwright MCP to check live locators and fix test defects, not app defects.</li>
+            <li>Guardrails stop the healer weakening assertions or adding waits. Passing specs rerun 3 times to catch flakiness.</li>
+            <li>A custom reporter tracks per-test pass rates, flaky runs and trends, persisted by GitHub Actions CI.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="lead" aria-labelledby="lead-title">
+        <div class="pipe-head">
+          <span><b>team.leadership</b> &middot; beyond the code</span>
+        </div>
+        <h2 id="lead-title" class="card-title">Leadership &amp; mentoring</h2>
+        <div class="lead-grid">
+          <div class="lead-item">
+            <p class="lead-label">Mentoring</p>
+            <p>Mentored QA engineers and trained manual testers in automation.</p>
+          </div>
+          <div class="lead-item">
+            <p class="lead-label">Hiring</p>
+            <p>Interviewed and evaluated QA Automation and SDET candidates on hiring panels.</p>
+          </div>
+          <div class="lead-item">
+            <p class="lead-label">Lead roles</p>
+            <p>Test Lead at ResMed Technology (2016&ndash;2021) and QA Lead at Matellio (2022&ndash;2025).</p>
+          </div>
+        </div>
       </section>
 
       <section class="stack" aria-labelledby="stack-title">
@@ -194,6 +238,19 @@
           </div>
         </dl>
       </section>
+
+      <section class="connect" aria-labelledby="connect-title">
+        <div>
+          <h2 id="connect-title" class="card-title">Let's connect</h2>
+          <p>Want to talk test automation or AI-assisted testing? Reach out on LinkedIn.</p>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://www.linkedin.com/in/srinivasaimandi/" target="_blank" rel="noopener"
+            >Connect on LinkedIn <span aria-hidden="true">&rarr;</span></a
+          >
+          <a class="btn ghost" href="https://github.com/Srinivasaimandi" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </section>
     </main>
 
     <footer class="inner footer">
@@ -202,20 +259,28 @@
     </footer>
 
     <script>
-      // Hide the top bar's LinkedIn/GitHub links while the intro buttons
-      // with the same links are visible. Without this script (or in very
-      // old browsers) the top bar links simply stay visible.
+      // Hide the top bar's LinkedIn/GitHub links while the "Let's connect"
+      // card's LinkedIn/GitHub buttons are visible. Without this script (or in very old browsers) the top
+      // bar links simply stay visible.
       (function () {
         var bar = document.querySelector(".topbar");
-        var buttons = document.querySelector(".actions");
-        if (!bar || !buttons || !("IntersectionObserver" in window)) return;
-        new IntersectionObserver(
+        var groups = document.querySelectorAll(".actions");
+        if (!bar || !groups.length || !("IntersectionObserver" in window)) return;
+        var visible = new Set();
+        var observer = new IntersectionObserver(
           function (entries) {
-            bar.classList.toggle("hide-nav", entries[0].isIntersecting);
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) visible.add(entry.target);
+              else visible.delete(entry.target);
+            });
+            bar.classList.toggle("hide-nav", visible.size > 0);
           },
           // buttons scrolled under the sticky bar count as not visible
           { rootMargin: "-" + bar.offsetHeight + "px 0px 0px 0px" }
-        ).observe(buttons);
+        );
+        groups.forEach(function (group) {
+          observer.observe(group);
+        });
       })();
     </script>
   </body>
