@@ -10,13 +10,20 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+    <script>
+      // apply the saved colour theme before the page paints
+      try {
+        var savedTheme = localStorage.getItem("theme");
+        if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+      } catch (e) {}
+    </script>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <title>Srinivasa Rao Imandi | AI-Augmented Test Engineer</title>
     <meta
       name="description"
       content="Srinivasa Rao Imandi, AI-Augmented Test Engineer and Senior Specialist at QualityAI. I build scripts that help test web apps faster."
     />
-    <meta name="color-scheme" content="light" />
+    <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" content="#f6f7f9" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://srinivasaimandi.github.io/" />
@@ -36,6 +43,15 @@
           <a href="https://www.linkedin.com/in/srinivasaimandi/" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/Srinivasaimandi" target="_blank" rel="noopener">GitHub</a>
         </nav>
+        <button class="theme-toggle" type="button" title="Change colour theme" aria-label="Change colour theme">
+          <!-- one quarter per theme, clockwise from the top-right; the script turns the wheel so the current theme sits top-right -->
+          <svg class="wheel" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path class="q-cobalt" d="M12 12 L12 1.5 A10.5 10.5 0 0 1 22.5 12 Z" />
+            <path class="q-violet" d="M12 12 L22.5 12 A10.5 10.5 0 0 1 12 22.5 Z" />
+            <path class="q-rose" d="M12 12 L12 22.5 A10.5 10.5 0 0 1 1.5 12 Z" />
+            <path class="q-midnight" d="M12 12 L1.5 12 A10.5 10.5 0 0 1 12 1.5 Z" />
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -282,6 +298,46 @@
         groups.forEach(function (group) {
           observer.observe(group);
         });
+      })();
+
+      // The colour wheel in the top bar cycles through the colour themes in style.css.
+      // Each click turns the wheel a quarter, so the current theme's slice sits at the top-right.
+      (function () {
+        var dot = document.querySelector(".theme-toggle");
+        var wheel = dot && dot.querySelector(".wheel");
+        if (!dot) return;
+        var root = document.documentElement;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        var themes = ["cobalt", "violet", "rose", "midnight"];
+        var names = { cobalt: "Cobalt", violet: "Violet", rose: "Rose", midnight: "Midnight" };
+
+        function label() {
+          var current = root.dataset.theme || "cobalt";
+          if (themes.indexOf(current) < 0) current = "cobalt";
+          dot.setAttribute("aria-label", "Colour theme: " + names[current] + ". Click to change");
+          dot.title = "Theme: " + names[current] + " (click to change)";
+          if (meta) meta.content = getComputedStyle(root).getPropertyValue("--bg").trim();
+          return current;
+        }
+
+        // keep counting quarter turns so the wheel always turns the same way
+        var turns = themes.indexOf(label());
+        function turn() {
+          if (wheel) wheel.style.transform = "rotate(" + turns * -90 + "deg)";
+        }
+
+        dot.addEventListener("click", function () {
+          var next = themes[(themes.indexOf(label()) + 1) % themes.length];
+          turns += 1;
+          turn();
+          if (next === "cobalt") delete root.dataset.theme;
+          else root.dataset.theme = next;
+          try {
+            localStorage.setItem("theme", next);
+          } catch (e) {}
+          label();
+        });
+        turn();
       })();
     </script>
   </body>
