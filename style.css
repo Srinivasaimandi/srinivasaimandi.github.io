@@ -8,6 +8,8 @@
   --muted: #556070;
   --line: #e1e5eb;
   --accent: #1748d8;
+  --accent-soft: #eaf0fd;
+  --accent-line: #c9d6f8;
   --pass: #0f8f4f;
   --pass-soft: #e3f4ea;
   --run: #b86e00;
@@ -227,8 +229,8 @@ h1 .dot {
 /*
   career pipeline: the motto drawn as CI stages
 */
-.pipeline {
-  margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
+.pipeline,
+.stack {
   padding: clamp(1.25rem, 3vw, 2rem);
   background: var(--surface);
   border: 1px solid var(--line);
@@ -329,6 +331,64 @@ h1 .dot {
   font-size: clamp(1.2rem, 1.05rem + 0.5vw, 1.45rem);
   letter-spacing: -0.02em;
   line-height: 1.2;
+}
+
+/*
+  tech stack: tools grouped by category, below the pipeline
+*/
+.pipeline {
+  margin-bottom: 1.25rem;
+}
+
+.stack {
+  margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.groups {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 1.25rem 2rem;
+}
+
+.group dt {
+  margin-bottom: 0.5rem;
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.group dd {
+  margin: 0;
+}
+
+.chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chips li {
+  padding: 0.25rem 0.65rem;
+  border-radius: 8px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* AI tools are highlighted to back up the AI-Augmented title */
+.group.ai dt {
+  color: var(--accent);
+}
+
+.group.ai .chips li {
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
+  color: var(--accent);
 }
 
 /*
