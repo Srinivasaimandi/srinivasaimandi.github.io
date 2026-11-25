@@ -723,6 +723,7 @@ h1 .dot {
 
   .portrait {
     grid-row: 1;
+    justify-self: center;
     width: min(100%, 280px);
   }
 }
