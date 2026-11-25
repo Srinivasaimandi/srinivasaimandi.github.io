@@ -1,0 +1,128 @@
+html,
+body {
+  margin: 0;
+  background-color: white;
+  font-family: "Courier Prime", "Courier New", Courier, monospace;
+  font-size: 100%;
+}
+
+/*
+hyperlink decoration
+*/
+.color-red {
+  color: #cc3636;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*
+fonts
+*/
+
+.titlefont {
+  font-size: clamp(1.75rem, 4.9vw, 5rem);
+}
+
+.descfont {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  line-height: 1.5;
+}
+
+/*
+  styles for all div containers
+*/
+
+img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#imageDiv {
+  background-color: black;
+  height: 400px;
+  width: auto;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+#nameDiv {
+  padding-top: 1%;
+}
+
+/*
+new changes
+*/
+
+.container {
+  display: grid;
+  grid-template-rows: 2fr auto;
+  grid-template-columns: auto;
+}
+
+.container-item {
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-top: 3px;
+}
+
+hr {
+  width: auto;
+  border: 1px solid #cc3636;
+}
+
+#footerDiv {
+  padding-top: 5px;
+  text-align: center;
+  font-size: clamp(0.75rem, 1vw, 1rem);
+  padding-bottom: 16px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#salutation {
+  align-self: flex-start;
+  padding-top: 4px;
+}
+
+#myname {
+  align-self: center;
+  text-align: center;
+}
+
+#desc {
+  align-self: flex-end;
+}
+
+/*
+media queries
+*/
+@media (max-width: 1200px) {
+  .container-item {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-item {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #imageDiv {
+    height: 260px;
+  }
+
+  #imageDiv img {
+    max-width: 100%;
+    height: auto;
+  }
+}
