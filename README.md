@@ -9,7 +9,8 @@ Personal site of Srinivasa Rao Imandi, Test Automation Engineer. It's live at
 - `style.css`: styles for the current site
 - `favicon.svg`: browser tab icon
 - `images/`: images used by the current site
-- `old/`: earlier versions of the site (v1 to v4), kept for reference
+
+Earlier versions of the site are in the git history.
 
 ## Running locally
 
