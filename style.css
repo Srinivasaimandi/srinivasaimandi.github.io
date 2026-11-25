@@ -163,11 +163,16 @@ h1 {
   }
 }
 
+.name {
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+  text-decoration-thickness: max(2px, 0.06em);
+  text-underline-offset: 0.18em;
+  text-decoration-skip-ink: none;
+}
+
 .role {
-  margin: 1.5rem 0 0;
-  padding-top: 1.25rem;
-  border-top: 2px solid var(--red);
-  max-width: 32ch;
+  margin: 1.25rem 0 0;
   font-size: 1.1em;
 }
 
