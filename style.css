@@ -385,17 +385,20 @@ h1 .dot {
 .pipe-head {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.5rem 1rem;
   margin-bottom: 1.4rem;
   font-family: var(--mono);
-  font-size: 0.8125rem;
+  font-size: 1.05rem;
   color: var(--muted);
 }
 
+/* the card's name (career.pipeline, tech.stack, …) is the largest text in the header */
 .pipe-head b {
   color: var(--ink);
   font-weight: 500;
+  font-size: 1.2rem;
 }
 
 .stages {
@@ -485,61 +488,102 @@ h1 .dot {
   margin-bottom: 1.25rem;
 }
 
-.project-grid {
+/* three projects side by side, split by thin lines; they stack on narrow screens */
+.project-cols {
   display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-  gap: clamp(1.25rem, 4vw, 3rem);
-  align-items: start;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.project h2 {
+.project-col {
+  display: flex;
+  flex-direction: column;
+  padding: 0 clamp(1rem, 2.5vw, 1.75rem);
+}
+
+.project-col:first-child {
+  padding-left: 0;
+}
+
+.project-col:last-child {
+  padding-right: 0;
+}
+
+.project-col + .project-col {
+  border-left: 1px solid var(--line);
+}
+
+.project h3 {
   margin: 0;
-  font-size: clamp(1.35rem, 1.1rem + 1vw, 1.9rem);
-  letter-spacing: -0.025em;
-  line-height: 1.15;
+  font-size: clamp(1.15rem, 1rem + 0.5vw, 1.35rem);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
   text-wrap: balance;
 }
 
-.project-lede {
-  margin: 0.75rem 0 1.5rem;
+.project-stack {
+  /* the bottom margin keeps a gap above the button in the tallest column */
+  margin: 0.4rem 0 1.25rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
   color: var(--muted);
-  line-height: 1.6;
 }
 
-.highlights {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 0.85rem;
+/* the button sits at the bottom of each column, so all three line up */
+.project-col .btn,
+.project-actions {
+  align-self: flex-start;
+  margin-top: auto;
 }
 
-.highlights li {
-  position: relative;
-  padding-left: 2rem;
-  font-size: 0.875rem;
-  line-height: 1.55;
+/* the main button on the left, the GitHub logo on the right edge of the column */
+.project-actions {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
 }
 
-.highlights li::before {
-  content: "\2713";
-  position: absolute;
-  left: 0;
-  top: 0.1rem;
+.project-actions .btn {
+  margin-top: 0;
+}
+
+/* the logo follows the theme's text colour; the 44px box is an easy tap target */
+.repo-link {
   display: grid;
   place-items: center;
-  width: 1.35rem;
-  height: 1.35rem;
-  border-radius: 50%;
-  background: var(--pass-soft);
-  color: var(--pass);
-  font-size: 0.75rem;
-  font-weight: 700;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  color: var(--ink);
+  transition: color 0.15s ease, background-color 0.15s ease;
 }
 
-@media (max-width: 720px) {
-  .project-grid {
+.repo-link svg {
+  fill: currentColor;
+}
+
+.repo-link:hover {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+@media (max-width: 900px) {
+  .project-cols {
     grid-template-columns: 1fr;
+  }
+
+  .project-col,
+  .project-col:first-child,
+  .project-col:last-child {
+    padding: 0;
+  }
+
+  .project-col + .project-col {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    margin-top: 1.75rem;
+    padding-top: 1.75rem;
   }
 }
 
@@ -555,14 +599,6 @@ h1 .dot {
   margin-bottom: 1.25rem;
 }
 
-/* heading shared by the leadership and connect cards */
-.card-title {
-  margin: 0;
-  font-size: clamp(1.35rem, 1.1rem + 1vw, 1.9rem);
-  letter-spacing: -0.025em;
-  line-height: 1.15;
-}
-
 /*
   leadership & mentoring: three short points side by side
 */
@@ -570,7 +606,6 @@ h1 .dot {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem 2rem;
-  margin-top: 1.25rem;
 }
 
 .lead-item p {
@@ -592,18 +627,22 @@ h1 .dot {
   let's connect: closing call to action, the last card on the page
 */
 .connect {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.25rem 2rem;
   margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
   background: var(--accent-soft);
   border-color: var(--accent-line);
 }
 
+/* message on the left, buttons on the right; the buttons wrap below on narrow screens */
+.connect-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+}
+
 .connect p {
-  margin: 0.4rem 0 0;
+  margin: 0;
   color: var(--muted);
 }
 
