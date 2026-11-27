@@ -393,20 +393,19 @@ h1 .dot.hop {
   line-height: 1.2;
 }
 
-.ledger .status {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--faint);
+.ledger .job {
+  font-size: 0.95rem;
+  color: var(--muted);
+  text-align: right;
 }
 
-.ledger .running .status {
+.ledger .current .job {
   color: var(--accent);
+  font-weight: 500;
 }
 
-/* a small pulsing dot in front of the current job's status */
-.ledger .running .status::before {
+/* a small pulsing dot in front of the current role */
+.ledger .current .job::before {
   content: "";
   display: inline-block;
   width: 7px;
@@ -658,7 +657,7 @@ h1 .dot.hop {
     scroll-behavior: auto;
   }
 
-  .ledger .running .status::before,
+  .ledger .current .job::before,
   h1 .dot.hop {
     animation: none;
   }
