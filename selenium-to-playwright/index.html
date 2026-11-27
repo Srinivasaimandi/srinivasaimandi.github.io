@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Selenium → Playwright</title>
+  <meta name="description" content="Learn Playwright (TypeScript) side by side with the Selenium (Java) you already know.">
+  <script>
+    // own key: the home page saves its colour theme under "theme" on the same site
+    document.documentElement.dataset.theme =
+      localStorage.getItem('stp-theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  </script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%236d28d9'/><path d='M9 16h12m-5-5 5 5-5 5' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-side="both">
+  <header class="topbar">
+    <button class="icon-btn menu-btn" id="menu-btn" aria-label="Toggle menu">☰</button>
+    <a class="handle" href="../index.html" title="Back to the home page" aria-label="~/srinivasaimandi, back to the home page">~/<span class="handle-name">srinivasaimandi</span></a>
+    <a class="brand" href="#/">
+      <span class="brand-sel">Selenium</span>
+      <span class="brand-arrow">→</span>
+      <span class="brand-pw">Playwright</span>
+    </a>
+    <div class="legend">
+      <span class="chip chip-sel">Selenium · Java</span>
+      <span class="chip chip-pw">Playwright · TypeScript</span>
+    </div>
+    <div class="side-toggle" role="group" aria-label="Show code for">
+      <button data-side="both" class="on">Both</button>
+      <button data-side="sel">Selenium</button>
+      <button data-side="pw">Playwright</button>
+    </div>
+    <button class="icon-btn theme-btn" id="theme-btn" aria-label="Toggle dark mode">◐</button>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <input type="search" id="filter" placeholder="Filter topics…" autocomplete="off">
+      <nav id="nav"></nav>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+    <main id="content"></main>
+  </div>
+
+  <script src="content/core-concepts-more.js"></script>
+  <script src="content/test-design.js"></script>
+  <script src="content/test-design-more.js"></script>
+  <script src="content/beyond-selenium.js"></script>
+  <script src="content/running-at-scale.js"></script>
+  <script src="content/migration.js"></script>
+  <script src="content/topics.js"></script>
+  <script src="assets/highlight.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
