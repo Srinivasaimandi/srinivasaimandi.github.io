@@ -15,9 +15,8 @@ Personal site of Srinivasa Rao Imandi, Test Automation Engineer. It's live at
   - `Srinivasa_Rao_Imandi_Resume_ver1.pdf` (two pages, the current live version) and
     `Srinivasa_Rao_Imandi_Resume_ver2.pdf` (one page, backup) are the two versions.
 
-The learning guides live in their own repositories and are served under this site's address:
-[selenium-to-playwright](https://github.com/Srinivasaimandi/selenium-to-playwright) and
-[java-to-typescript](https://github.com/Srinivasaimandi/java-to-typescript).
+The learning guide lives in its own repository and is served under this site's address:
+[selenium-to-playwright](https://github.com/Srinivasaimandi/selenium-to-playwright).
 
 Earlier versions of the site are in the git history.
 
