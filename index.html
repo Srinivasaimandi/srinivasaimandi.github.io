@@ -36,12 +36,24 @@
     <meta name="twitter:card" content="summary" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- icons used more than once on the page (Simple Icons, simpleicons.org, CC0) -->
+    <svg class="sprite" aria-hidden="true" focusable="false">
+      <symbol id="i-github" viewBox="0 0 24 24">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+      </symbol>
+    </svg>
+
     <header class="topbar">
       <div class="inner">
-        <a class="handle" href="./">~/srinivasaimandi</a>
-        <nav aria-label="Profiles">
-          <a href="https://www.linkedin.com/in/srinivasaimandi/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/Srinivasaimandi" target="_blank" rel="noopener">GitHub</a>
+        <a class="handle" href="#top">~/srinivasaimandi</a>
+        <nav class="sections-nav" aria-label="Sections">
+          <a href="#career">Career</a>
+          <a href="#projects">Projects</a>
+          <a href="#leadership">Leadership</a>
+          <a href="#stack">Stack</a>
+          <a href="#contact">Contact</a>
         </nav>
         <button class="theme-toggle" type="button" title="Change colour theme" aria-label="Change colour theme">
           <!-- one quarter per theme, clockwise from the top-right; the script turns the wheel so the current theme sits top-right -->
@@ -55,8 +67,9 @@
       </div>
     </header>
 
-    <main class="inner">
-      <section class="hero">
+    <main id="main" class="inner">
+      <!-- hero: who I am, what I do, and the two things a recruiter wants first -->
+      <section class="hero" id="top" aria-label="Introduction">
         <div class="intro">
           <p class="eyebrow">Hi there, I'm</p>
           <h1>Srinivasa Rao Imandi<span class="dot">.</span></h1>
@@ -67,46 +80,76 @@
             <a href="https://www.quality-ai.com" target="_blank" rel="noopener"><b>QualityAI</b></a>,
             with 10 years in QA automation.
           </p>
+          <div class="actions">
+            <a class="btn primary" href="https://www.linkedin.com/in/srinivasaimandi/" target="_blank" rel="noopener"
+              >Connect on LinkedIn <span aria-hidden="true">&rarr;</span></a
+            >
+            <a class="btn ghost" href="./resume/Srinivasa_Rao_Imandi_Resume.pdf" download>Download r&eacute;sum&eacute;</a>
+            <a
+              class="icon-link"
+              href="https://github.com/Srinivasaimandi"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub profile"
+              title="GitHub profile"
+            >
+              <svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-github" /></svg>
+            </a>
+          </div>
         </div>
-        <img class="portrait" src="./images/headshot.jpg" alt="Portrait of Srinivasa Rao Imandi" width="800" height="800" />
+        <figure class="portrait">
+          <img src="./images/headshot.jpg" alt="Portrait of Srinivasa Rao Imandi" width="800" height="800" />
+          <figcaption><span class="live" aria-hidden="true"></span>Now at QualityAI</figcaption>
+        </figure>
       </section>
 
-      <section class="pipeline" aria-labelledby="pipeline-title">
-        <div class="pipe-head">
-          <span><b id="pipeline-title">career.pipeline</b> &middot; started 2016</span>
-          <span>3 passed &middot; 1 running</span>
+      <!-- a test-run style summary of the page -->
+      <ul class="summary" aria-label="At a glance">
+        <li><b>10</b> years in QA automation</li>
+        <li><b>4</b> companies</li>
+        <li><b>3</b> personal projects</li>
+        <li><b>26</b> tools</li>
+      </ul>
+
+      <section class="section" id="career" aria-labelledby="career-title">
+        <div class="rail">
+          <p class="rail-num" aria-hidden="true">01</p>
+          <h2 id="career-title">career.pipeline</h2>
+          <p class="rail-note">started 2016<span class="note-break"></span>3 passed &middot; 1 running</p>
         </div>
         <ol class="stages">
           <li class="stage passed">
             <span class="icon" aria-hidden="true">&#10003;</span>
             <p class="status">passed &middot; 2016&ndash;2021</p>
-            <h2>ResMed Technology</h2>
+            <h3>ResMed Technology</h3>
           </li>
           <li class="stage passed">
             <span class="icon" aria-hidden="true">&#10003;</span>
             <p class="status">passed &middot; 2021&ndash;2022</p>
-            <h2>Coforge</h2>
+            <h3>Coforge</h3>
           </li>
           <li class="stage passed">
             <span class="icon" aria-hidden="true">&#10003;</span>
             <p class="status">passed &middot; 2022&ndash;2025</p>
-            <h2>Matellio</h2>
+            <h3>Matellio</h3>
           </li>
           <li class="stage running">
             <span class="icon" aria-hidden="true">&#9679;</span>
             <p class="status">running &middot; 2025&ndash;now</p>
-            <h2>QualityAI</h2>
+            <h3>QualityAI</h3>
           </li>
         </ol>
       </section>
 
-      <section class="project" aria-labelledby="projects-title">
-        <div class="pipe-head">
-          <span><b id="projects-title">personal.projects</b> &middot; built and shared</span>
-          <span>1 framework &middot; 2 learning guides</span>
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="rail">
+          <p class="rail-num" aria-hidden="true">02</p>
+          <h2 id="projects-title">personal.projects</h2>
+          <p class="rail-note">built and shared<span class="note-break"></span>1 framework &middot; 2 learning guides</p>
         </div>
-        <div class="project-cols">
-          <article class="project-col" aria-labelledby="project-title">
+        <div class="projects">
+          <article class="project featured" aria-labelledby="project-title">
+            <p class="project-kicker">Featured project</p>
             <h3 id="project-title">AI-Augmented Playwright Framework</h3>
             <p class="project-stack">TypeScript &middot; Playwright MCP &middot; Claude Code</p>
             <div class="project-actions">
@@ -118,65 +161,74 @@
                 >Read the docs <span aria-hidden="true">&rarr;</span></a
               >
               <a
-                class="repo-link"
+                class="icon-link"
                 href="https://github.com/Srinivasaimandi/playwright-automation-demo"
                 target="_blank"
                 rel="noopener"
                 aria-label="View the code on GitHub"
                 title="View the code on GitHub"
               >
-                <!-- GitHub mark from Simple Icons (simpleicons.org, CC0) -->
-                <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false">
-                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                </svg>
+                <svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-github" /></svg>
               </a>
             </div>
           </article>
 
-          <article class="project-col" aria-labelledby="guide-title">
-            <h3 id="guide-title">Selenium &rarr; Playwright</h3>
+          <article class="project" aria-labelledby="guide-title">
+            <h3 id="guide-title">Selenium <span class="arrow" aria-hidden="true">&rarr;</span><span class="sr-only">to</span> Playwright</h3>
             <p class="project-stack">web testing evolution</p>
-            <a class="btn primary" href="selenium-to-playwright/index.html"
+            <a class="btn ghost" href="selenium-to-playwright/index.html"
               >Open the guide <span aria-hidden="true">&rarr;</span></a
             >
           </article>
 
-          <article class="project-col" aria-labelledby="j2t-title">
-            <h3 id="j2t-title">Java &rarr; TypeScript</h3>
+          <article class="project" aria-labelledby="j2t-title">
+            <h3 id="j2t-title">Java <span class="arrow" aria-hidden="true">&rarr;</span><span class="sr-only">to</span> TypeScript</h3>
             <p class="project-stack">code transition</p>
-            <a class="btn primary" href="java-to-typescript/index.html"
+            <a class="btn ghost" href="java-to-typescript/index.html"
               >Open the guide <span aria-hidden="true">&rarr;</span></a
             >
           </article>
         </div>
       </section>
 
-      <section class="lead" aria-labelledby="lead-title">
-        <div class="pipe-head">
-          <span><b id="lead-title">team.leadership</b> &middot; beyond the code</span>
+      <section class="section" id="leadership" aria-labelledby="lead-title">
+        <div class="rail">
+          <p class="rail-num" aria-hidden="true">03</p>
+          <h2 id="lead-title">team.leadership</h2>
+          <p class="rail-note">beyond the code</p>
         </div>
         <div class="lead-grid">
           <div class="lead-item">
-            <p class="lead-label">Mentoring</p>
+            <h3>Mentoring</h3>
             <p>Mentored QA engineers and trained manual testers in automation.</p>
           </div>
           <div class="lead-item">
-            <p class="lead-label">Hiring</p>
+            <h3>Hiring</h3>
             <p>Interviewed and evaluated QA Automation and SDET candidates on hiring panels.</p>
           </div>
           <div class="lead-item">
-            <p class="lead-label">Lead roles</p>
+            <h3>Lead roles</h3>
             <p>Test Lead at ResMed Technology (2016&ndash;2021) and QA Lead at Matellio (2022&ndash;2025).</p>
           </div>
         </div>
       </section>
 
-      <section class="stack" aria-labelledby="stack-title">
-        <div class="pipe-head">
-          <span><b id="stack-title">tech.stack</b> &middot; used so far</span>
-          <span>10 categories &middot; 26 tools</span>
+      <section class="section" id="stack" aria-labelledby="stack-title">
+        <div class="rail">
+          <p class="rail-num" aria-hidden="true">04</p>
+          <h2 id="stack-title">tech.stack</h2>
+          <p class="rail-note">used so far<span class="note-break"></span>10 categories &middot; 26 tools</p>
         </div>
         <dl class="groups">
+          <div class="group ai">
+            <dt>AI-assisted testing</dt>
+            <dd>
+              <ul class="chips">
+                <li>Playwright MCP</li>
+                <li>Claude Code</li>
+              </ul>
+            </dd>
+          </div>
           <div class="group">
             <dt>Languages</dt>
             <dd>
@@ -193,15 +245,6 @@
                 <li>Selenium</li>
                 <li>Playwright</li>
                 <li>Appium</li>
-              </ul>
-            </dd>
-          </div>
-          <div class="group ai">
-            <dt>AI-assisted testing</dt>
-            <dd>
-              <ul class="chips">
-                <li>Playwright MCP</li>
-                <li>Claude Code</li>
               </ul>
             </dd>
           </div>
@@ -276,12 +319,15 @@
         </dl>
       </section>
 
-      <section class="connect" aria-labelledby="connect-title">
-        <div class="pipe-head">
-          <span><b id="connect-title">lets.connect</b> &middot; open to opportunities</span>
+      <section class="section contact" id="contact" aria-labelledby="connect-title">
+        <div class="rail">
+          <p class="rail-num" aria-hidden="true">05</p>
+          <h2 id="connect-title">lets.connect</h2>
+          <p class="rail-note">open to opportunities</p>
         </div>
-        <div class="connect-body">
-          <p>Want to talk test automation or AI-assisted testing? Reach out on LinkedIn, or grab my r&eacute;sum&eacute;.</p>
+        <div class="contact-body">
+          <p class="contact-line">Want to talk test automation or AI-assisted testing?</p>
+          <p class="contact-sub">Reach out on LinkedIn, or grab my r&eacute;sum&eacute;.</p>
           <div class="actions">
             <a class="btn primary" href="https://www.linkedin.com/in/srinivasaimandi/" target="_blank" rel="noopener"
               >Connect on LinkedIn <span aria-hidden="true">&rarr;</span></a
@@ -296,30 +342,35 @@
     <footer class="inner footer">
       <span>&#169; 2023-2026 srinivasaimandi</span>
       <span>Learn. Progress. Prosper.</span>
+      <a href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
     </footer>
 
     <script>
-      // Hide the top bar's LinkedIn/GitHub links while the "Let's connect"
-      // card's LinkedIn/GitHub buttons are visible. Without this script (or in very old browsers) the top
-      // bar links simply stay visible.
+      // Highlight the top bar link for the section being read. Without this script
+      // (or in very old browsers) the links simply stay unhighlighted.
       (function () {
-        var bar = document.querySelector(".topbar");
-        var groups = document.querySelectorAll(".actions");
-        if (!bar || !groups.length || !("IntersectionObserver" in window)) return;
-        var visible = new Set();
+        var links = document.querySelectorAll(".sections-nav a");
+        if (!links.length || !("IntersectionObserver" in window)) return;
+        var byId = {};
+        links.forEach(function (a) {
+          byId[a.getAttribute("href").slice(1)] = a;
+        });
         var observer = new IntersectionObserver(
           function (entries) {
             entries.forEach(function (entry) {
-              if (entry.isIntersecting) visible.add(entry.target);
-              else visible.delete(entry.target);
+              if (!entry.isIntersecting) return;
+              links.forEach(function (a) {
+                a.removeAttribute("aria-current");
+              });
+              var link = byId[entry.target.id];
+              if (link) link.setAttribute("aria-current", "true");
             });
-            bar.classList.toggle("hide-nav", visible.size > 0);
           },
-          // buttons scrolled under the sticky bar count as not visible
-          { rootMargin: "-" + bar.offsetHeight + "px 0px 0px 0px" }
+          // a section counts as "being read" when it crosses the upper third of the screen
+          { rootMargin: "-30% 0px -60% 0px" }
         );
-        groups.forEach(function (group) {
-          observer.observe(group);
+        document.querySelectorAll("main > section[id]").forEach(function (section) {
+          observer.observe(section);
         });
       })();
 
