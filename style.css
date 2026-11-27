@@ -1,17 +1,56 @@
 /*
-  Colours and type. Every colour on the page comes from these variables,
-  so colour themes can be added later by overriding them.
+  Colours and type. Every colour on the page comes from these variables.
+  Terracotta is the default theme; the others below override the colours only.
+  Each accent and grey is at least 4.5:1 against its paper, so small text stays readable.
 */
 :root {
   --paper: #f7f5f0;
   --ink: #1d1c1a;
   --muted: #6b675f;
-  --faint: #8a8579;
+  --faint: #726e64;
   --line: #e2ddd2;
   --accent: #b3471d;
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color-scheme: light;
+}
+
+/* colour themes, switched by clicking the full stop after the name (see the script in index.html) */
+[data-theme="ink"] {
+  --paper: #f5f4ef;
+  --ink: #1a1d24;
+  --muted: #5f646e;
+  --faint: #6a6e76;
+  --line: #dfdfd8;
+  --accent: #2b4c9b;
+}
+
+[data-theme="forest"] {
+  --paper: #f3f4ee;
+  --ink: #1a1f1b;
+  --muted: #5f675f;
+  --faint: #697066;
+  --line: #dde0d5;
+  --accent: #2f6b4f;
+}
+
+[data-theme="plum"] {
+  --paper: #f7f3f3;
+  --ink: #201a1d;
+  --muted: #6b6166;
+  --faint: #756b70;
+  --line: #e6dcdd;
+  --accent: #7a2e5c;
+}
+
+[data-theme="night"] {
+  --paper: #17171a;
+  --ink: #ecebe6;
+  --muted: #a3a29b;
+  --faint: #86857f;
+  --line: #2c2c30;
+  --accent: #e98a5d;
+  color-scheme: dark;
 }
 
 *,
@@ -28,6 +67,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
+  transition: background-color 0.3s ease, color 0.3s ease;
   font-family: var(--sans);
   font-size: 1rem;
   line-height: 1.6;
@@ -123,8 +163,48 @@ h1 {
   line-height: 0.98;
 }
 
+/*
+  The full stop after the name is the colour theme switch (see the script in index.html).
+  It looks like plain punctuation; only the pointer and a hover hint give it away.
+*/
 h1 .dot {
+  position: relative;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
   color: var(--accent);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* a bigger invisible click area than the dot itself */
+h1 .dot::after {
+  content: "";
+  position: absolute;
+  inset: 25% -0.15em 0;
+}
+
+h1 .dot:hover {
+  filter: brightness(1.15);
+}
+
+h1 .dot:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+h1 .dot.hop {
+  animation: hop 0.4s ease;
+}
+
+@keyframes hop {
+  40% {
+    transform: translateY(-0.12em);
+  }
 }
 
 .role {
@@ -578,10 +658,13 @@ h1 .dot {
     scroll-behavior: auto;
   }
 
-  .ledger .running .status::before {
+  .ledger .running .status::before,
+  h1 .dot.hop {
     animation: none;
   }
 
+  body,
+  h1 .dot,
   .index a,
   .index .num::after,
   .lede a,
