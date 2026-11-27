@@ -6,25 +6,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
-    <script>
-      // apply the saved colour theme before the page paints
-      try {
-        var savedTheme = localStorage.getItem("theme");
-        if (savedTheme) document.documentElement.dataset.theme = savedTheme;
-      } catch (e) {}
-    </script>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <title>Srinivasa Rao Imandi | AI-Augmented Test Engineer</title>
     <meta
       name="description"
       content="Srinivasa Rao Imandi, AI-Augmented Test Engineer and Senior Specialist at QualityAI. I build scripts that help test web apps faster."
     />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#f6f7f9" />
+    <meta name="theme-color" content="#f7f5f0" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://srinivasaimandi.github.io/" />
     <meta property="og:title" content="Srinivasa Rao Imandi | AI-Augmented Test Engineer" />
@@ -36,320 +28,228 @@
     <meta name="twitter:card" content="summary" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#content">Skip to content</a>
 
-    <!-- icons used more than once on the page (Simple Icons, simpleicons.org, CC0) -->
-    <svg class="sprite" aria-hidden="true" focusable="false">
-      <symbol id="i-github" viewBox="0 0 24 24">
-        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-      </symbol>
-    </svg>
+    <div class="page">
+      <!-- left column: who I am, the section index and my links; stays in place on wide screens -->
+      <header class="profile">
+        <p class="hello">Hi there, I'm</p>
+        <h1>Srinivasa Rao <span class="nowrap">Imandi<span class="dot">.</span></span></h1>
+        <p class="role">AI-Augmented Test Engineer</p>
+        <p class="lede">
+          I build scripts that help teams ship web, API and mobile apps with confidence, and I use AI
+          agents to turn requirements into tests faster. I'm a Senior Specialist at
+          <a href="https://www.quality-ai.com" target="_blank" rel="noopener">QualityAI</a>, with 10 years
+          in QA automation.
+        </p>
 
-    <header class="topbar">
-      <div class="inner">
-        <a class="handle" href="#top">~/srinivasaimandi</a>
-        <nav class="sections-nav" aria-label="Sections">
-          <a href="#career">Career</a>
-          <a href="#projects">Projects</a>
-          <a href="#leadership">Leadership</a>
-          <a href="#stack">Stack</a>
-          <a href="#contact">Contact</a>
+        <nav class="index" aria-label="Sections">
+          <ol>
+            <li><a href="#career"><span class="num">01</span>Career</a></li>
+            <li><a href="#projects"><span class="num">02</span>Projects</a></li>
+            <li><a href="#leadership"><span class="num">03</span>Leadership</a></li>
+            <li><a href="#stack"><span class="num">04</span>Stack</a></li>
+            <li><a href="#contact"><span class="num">05</span>Contact</a></li>
+          </ol>
         </nav>
-        <button class="theme-toggle" type="button" title="Change colour theme" aria-label="Change colour theme">
-          <!-- one quarter per theme, clockwise from the top-right; the script turns the wheel so the current theme sits top-right -->
-          <svg class="wheel" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-            <path class="q-cobalt" d="M12 12 L12 1.5 A10.5 10.5 0 0 1 22.5 12 Z" />
-            <path class="q-violet" d="M12 12 L22.5 12 A10.5 10.5 0 0 1 12 22.5 Z" />
-            <path class="q-rose" d="M12 12 L12 22.5 A10.5 10.5 0 0 1 1.5 12 Z" />
-            <path class="q-midnight" d="M12 12 L1.5 12 A10.5 10.5 0 0 1 12 1.5 Z" />
-          </svg>
-        </button>
-      </div>
-    </header>
 
-    <main id="main" class="inner">
-      <!-- hero: who I am, what I do, and the two things a recruiter wants first -->
-      <section class="hero" id="top" aria-label="Introduction">
-        <div class="intro">
-          <p class="eyebrow">Hi there, I'm</p>
-          <h1>Srinivasa Rao Imandi<span class="dot">.</span></h1>
-          <p class="role">AI-Augmented Test Engineer</p>
-          <p class="lede">
-            I build scripts that help teams <b>ship web, API and mobile apps with confidence</b>, and I
-            use AI agents to turn requirements into tests faster. I'm a Senior Specialist at
-            <a href="https://www.quality-ai.com" target="_blank" rel="noopener"><b>QualityAI</b></a>,
-            with 10 years in QA automation.
-          </p>
-          <div class="actions">
-            <a class="btn primary" href="https://www.linkedin.com/in/srinivasaimandi/" target="_blank" rel="noopener"
-              >Connect on LinkedIn <span aria-hidden="true">&rarr;</span></a
+        <ul class="links" aria-label="Profiles">
+          <li>
+            <a href="https://www.linkedin.com/in/srinivasaimandi/" target="_blank" rel="noopener"
+              >LinkedIn <span aria-hidden="true">&#8599;</span></a
             >
-            <a class="btn ghost" href="./resume/Srinivasa_Rao_Imandi_Resume.pdf" download>Download r&eacute;sum&eacute;</a>
-            <a
-              class="icon-link"
-              href="https://github.com/Srinivasaimandi"
-              target="_blank"
-              rel="noopener"
-              aria-label="GitHub profile"
-              title="GitHub profile"
+          </li>
+          <li>
+            <a href="https://github.com/Srinivasaimandi" target="_blank" rel="noopener"
+              >GitHub <span aria-hidden="true">&#8599;</span></a
             >
-              <svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-github" /></svg>
-            </a>
-          </div>
-        </div>
-        <figure class="portrait">
-          <img src="./images/headshot.jpg" alt="Portrait of Srinivasa Rao Imandi" width="800" height="800" />
-          <figcaption><span class="live" aria-hidden="true"></span>Now at QualityAI</figcaption>
-        </figure>
-      </section>
+          </li>
+          <li>
+            <a href="./resume/Srinivasa_Rao_Imandi_Resume.pdf" download
+              >R&eacute;sum&eacute; <span aria-hidden="true">&#8595;</span></a
+            >
+          </li>
+        </ul>
+      </header>
 
-      <!-- a test-run style summary of the page -->
-      <ul class="summary" aria-label="At a glance">
-        <li><b>10</b> years in QA automation</li>
-        <li><b>4</b> companies</li>
-        <li><b>3</b> personal projects</li>
-        <li><b>26</b> tools</li>
-      </ul>
+      <!-- right column: the sections -->
+      <main id="content" class="content">
+        <section id="career" aria-labelledby="career-title">
+          <header class="section-head">
+            <h2 id="career-title"><span class="num" aria-hidden="true">01</span>Career</h2>
+            <p>Started 2016 &middot; 3 passed &middot; 1 running</p>
+          </header>
+          <ol class="ledger">
+            <li class="running">
+              <span class="years">2025 &ndash; now</span>
+              <span class="company">QualityAI</span>
+              <span class="status">running</span>
+            </li>
+            <li>
+              <span class="years">2022 &ndash; 2025</span>
+              <span class="company">Matellio</span>
+              <span class="status">passed</span>
+            </li>
+            <li>
+              <span class="years">2021 &ndash; 2022</span>
+              <span class="company">Coforge</span>
+              <span class="status">passed</span>
+            </li>
+            <li>
+              <span class="years">2016 &ndash; 2021</span>
+              <span class="company">ResMed Technology</span>
+              <span class="status">passed</span>
+            </li>
+          </ol>
+        </section>
 
-      <section class="section" id="career" aria-labelledby="career-title">
-        <div class="rail">
-          <p class="rail-num" aria-hidden="true">01</p>
-          <h2 id="career-title">career.pipeline</h2>
-          <p class="rail-note">started 2016<span class="note-break"></span>3 passed &middot; 1 running</p>
-        </div>
-        <ol class="stages">
-          <li class="stage passed">
-            <span class="icon" aria-hidden="true">&#10003;</span>
-            <p class="status">passed &middot; 2016&ndash;2021</p>
-            <h3>ResMed Technology</h3>
-          </li>
-          <li class="stage passed">
-            <span class="icon" aria-hidden="true">&#10003;</span>
-            <p class="status">passed &middot; 2021&ndash;2022</p>
-            <h3>Coforge</h3>
-          </li>
-          <li class="stage passed">
-            <span class="icon" aria-hidden="true">&#10003;</span>
-            <p class="status">passed &middot; 2022&ndash;2025</p>
-            <h3>Matellio</h3>
-          </li>
-          <li class="stage running">
-            <span class="icon" aria-hidden="true">&#9679;</span>
-            <p class="status">running &middot; 2025&ndash;now</p>
-            <h3>QualityAI</h3>
-          </li>
-        </ol>
-      </section>
+        <section id="projects" aria-labelledby="projects-title">
+          <header class="section-head">
+            <h2 id="projects-title"><span class="num" aria-hidden="true">02</span>Projects</h2>
+            <p>Built and shared &middot; 1 framework &middot; 2 learning guides</p>
+          </header>
+          <ol class="works">
+            <li>
+              <p class="kicker">Featured project</p>
+              <h3>AI-Augmented Playwright Framework</h3>
+              <p class="meta">TypeScript &middot; Playwright MCP &middot; Claude Code</p>
+              <p class="work-links">
+                <a
+                  href="https://htmlpreview.github.io/?https://github.com/Srinivasaimandi/playwright-automation-demo/blob/main/docs/index.html"
+                  target="_blank"
+                  rel="noopener"
+                  >Read the docs <span aria-hidden="true">&#8599;</span></a
+                >
+                <a href="https://github.com/Srinivasaimandi/playwright-automation-demo" target="_blank" rel="noopener"
+                  >View the code on GitHub <span aria-hidden="true">&#8599;</span></a
+                >
+              </p>
+            </li>
+            <li>
+              <h3>Selenium <span class="arrow" aria-hidden="true">&rarr;</span><span class="sr-only">to</span> Playwright</h3>
+              <p class="meta">Web testing evolution</p>
+              <p class="work-links">
+                <a href="selenium-to-playwright/index.html">Open the guide <span aria-hidden="true">&rarr;</span></a>
+              </p>
+            </li>
+            <li>
+              <h3>Java <span class="arrow" aria-hidden="true">&rarr;</span><span class="sr-only">to</span> TypeScript</h3>
+              <p class="meta">Code transition</p>
+              <p class="work-links">
+                <a href="java-to-typescript/index.html">Open the guide <span aria-hidden="true">&rarr;</span></a>
+              </p>
+            </li>
+          </ol>
+        </section>
 
-      <section class="section" id="projects" aria-labelledby="projects-title">
-        <div class="rail">
-          <p class="rail-num" aria-hidden="true">02</p>
-          <h2 id="projects-title">personal.projects</h2>
-          <p class="rail-note">built and shared<span class="note-break"></span>1 framework &middot; 2 learning guides</p>
-        </div>
-        <div class="projects">
-          <article class="project featured" aria-labelledby="project-title">
-            <p class="project-kicker">Featured project</p>
-            <h3 id="project-title">AI-Augmented Playwright Framework</h3>
-            <p class="project-stack">TypeScript &middot; Playwright MCP &middot; Claude Code</p>
-            <div class="project-actions">
-              <a
-                class="btn primary"
-                href="https://htmlpreview.github.io/?https://github.com/Srinivasaimandi/playwright-automation-demo/blob/main/docs/index.html"
-                target="_blank"
-                rel="noopener"
-                >Read the docs <span aria-hidden="true">&rarr;</span></a
-              >
-              <a
-                class="icon-link"
-                href="https://github.com/Srinivasaimandi/playwright-automation-demo"
-                target="_blank"
-                rel="noopener"
-                aria-label="View the code on GitHub"
-                title="View the code on GitHub"
-              >
-                <svg width="24" height="24" aria-hidden="true" focusable="false"><use href="#i-github" /></svg>
-              </a>
+        <section id="leadership" aria-labelledby="lead-title">
+          <header class="section-head">
+            <h2 id="lead-title"><span class="num" aria-hidden="true">03</span>Leadership</h2>
+            <p>Beyond the code</p>
+          </header>
+          <dl class="notes">
+            <div>
+              <dt>Mentoring</dt>
+              <dd>Mentored QA engineers and trained manual testers in automation.</dd>
             </div>
-          </article>
+            <div>
+              <dt>Hiring</dt>
+              <dd>Interviewed and evaluated QA Automation and SDET candidates on hiring panels.</dd>
+            </div>
+            <div>
+              <dt>Lead roles</dt>
+              <dd>Test Lead at ResMed Technology (2016&ndash;2021) and QA Lead at Matellio (2022&ndash;2025).</dd>
+            </div>
+          </dl>
+        </section>
 
-          <article class="project" aria-labelledby="guide-title">
-            <h3 id="guide-title">Selenium <span class="arrow" aria-hidden="true">&rarr;</span><span class="sr-only">to</span> Playwright</h3>
-            <p class="project-stack">web testing evolution</p>
-            <a class="btn ghost" href="selenium-to-playwright/index.html"
-              >Open the guide <span aria-hidden="true">&rarr;</span></a
-            >
-          </article>
+        <section id="stack" aria-labelledby="stack-title">
+          <header class="section-head">
+            <h2 id="stack-title"><span class="num" aria-hidden="true">04</span>Stack</h2>
+            <p>Used so far &middot; 10 categories &middot; 26 tools</p>
+          </header>
+          <dl class="stack">
+            <div class="ai">
+              <dt>AI-assisted testing</dt>
+              <dd>Playwright MCP, Claude Code</dd>
+            </div>
+            <div>
+              <dt>Languages</dt>
+              <dd>Java, TypeScript</dd>
+            </div>
+            <div>
+              <dt>UI &amp; mobile automation</dt>
+              <dd>Selenium, Playwright, Appium</dd>
+            </div>
+            <div>
+              <dt>API testing</dt>
+              <dd>Rest Assured, Postman, ReadyAPI, Swagger</dd>
+            </div>
+            <div>
+              <dt>Test frameworks</dt>
+              <dd>TestNG, Cucumber</dd>
+            </div>
+            <div>
+              <dt>CI/CD</dt>
+              <dd>Jenkins, GitHub Actions, GitLab</dd>
+            </div>
+            <div>
+              <dt>Cloud &amp; containers</dt>
+              <dd>AWS, Testcontainers</dd>
+            </div>
+            <div>
+              <dt>Performance</dt>
+              <dd>JMeter, BlazeMeter</dd>
+            </div>
+            <div>
+              <dt>Databases</dt>
+              <dd>MS SQL Server, PostgreSQL</dd>
+            </div>
+            <div>
+              <dt>Tools</dt>
+              <dd>Maven, Jira, qTest, Gerrit</dd>
+            </div>
+          </dl>
+        </section>
 
-          <article class="project" aria-labelledby="j2t-title">
-            <h3 id="j2t-title">Java <span class="arrow" aria-hidden="true">&rarr;</span><span class="sr-only">to</span> TypeScript</h3>
-            <p class="project-stack">code transition</p>
-            <a class="btn ghost" href="java-to-typescript/index.html"
-              >Open the guide <span aria-hidden="true">&rarr;</span></a
-            >
-          </article>
-        </div>
-      </section>
+        <section id="contact" class="contact" aria-labelledby="contact-title">
+          <header class="section-head">
+            <h2 id="contact-title"><span class="num" aria-hidden="true">05</span>Contact</h2>
+            <p>Open to opportunities</p>
+          </header>
+          <p class="closing">Want to talk test automation or <span class="nowrap">AI-assisted</span> testing?</p>
+          <p class="closing-sub">Reach out on LinkedIn, or grab my r&eacute;sum&eacute;.</p>
+          <ul class="big-links">
+            <li>
+              <a href="https://www.linkedin.com/in/srinivasaimandi/" target="_blank" rel="noopener"
+                >Connect on LinkedIn <span aria-hidden="true">&#8599;</span></a
+              >
+            </li>
+            <li>
+              <a href="./resume/Srinivasa_Rao_Imandi_Resume.pdf" download
+                >Download r&eacute;sum&eacute; (PDF) <span aria-hidden="true">&#8595;</span></a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/Srinivasaimandi" target="_blank" rel="noopener"
+                >GitHub <span aria-hidden="true">&#8599;</span></a
+              >
+            </li>
+          </ul>
+        </section>
 
-      <section class="section" id="leadership" aria-labelledby="lead-title">
-        <div class="rail">
-          <p class="rail-num" aria-hidden="true">03</p>
-          <h2 id="lead-title">team.leadership</h2>
-          <p class="rail-note">beyond the code</p>
-        </div>
-        <div class="lead-grid">
-          <div class="lead-item">
-            <h3>Mentoring</h3>
-            <p>Mentored QA engineers and trained manual testers in automation.</p>
-          </div>
-          <div class="lead-item">
-            <h3>Hiring</h3>
-            <p>Interviewed and evaluated QA Automation and SDET candidates on hiring panels.</p>
-          </div>
-          <div class="lead-item">
-            <h3>Lead roles</h3>
-            <p>Test Lead at ResMed Technology (2016&ndash;2021) and QA Lead at Matellio (2022&ndash;2025).</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="stack" aria-labelledby="stack-title">
-        <div class="rail">
-          <p class="rail-num" aria-hidden="true">04</p>
-          <h2 id="stack-title">tech.stack</h2>
-          <p class="rail-note">used so far<span class="note-break"></span>10 categories &middot; 26 tools</p>
-        </div>
-        <dl class="groups">
-          <div class="group ai">
-            <dt>AI-assisted testing</dt>
-            <dd>
-              <ul class="chips">
-                <li>Playwright MCP</li>
-                <li>Claude Code</li>
-              </ul>
-            </dd>
-          </div>
-          <div class="group">
-            <dt>Languages</dt>
-            <dd>
-              <ul class="chips">
-                <li>Java</li>
-                <li>TypeScript</li>
-              </ul>
-            </dd>
-          </div>
-          <div class="group">
-            <dt>UI &amp; mobile automation</dt>
-            <dd>
-              <ul class="chips">
-                <li>Selenium</li>
-                <li>Playwright</li>
-                <li>Appium</li>
-              </ul>
-            </dd>
-          </div>
-          <div class="group">
-            <dt>API testing</dt>
-            <dd>
-              <ul class="chips">
-                <li>Rest Assured</li>
-                <li>Postman</li>
-                <li>ReadyAPI</li>
-                <li>Swagger</li>
-              </ul>
-            </dd>
-          </div>
-          <div class="group">
-            <dt>Test frameworks</dt>
-            <dd>
-              <ul class="chips">
-                <li>TestNG</li>
-                <li>Cucumber</li>
-              </ul>
-            </dd>
-          </div>
-          <div class="group">
-            <dt>CI/CD</dt>
-            <dd>
-              <ul class="chips">
-                <li>Jenkins</li>
-                <li>GitHub Actions</li>
-                <li>GitLab</li>
-              </ul>
-            </dd>
-          </div>
-          <div class="group">
-            <dt>Cloud &amp; containers</dt>
-            <dd>
-              <ul class="chips">
-                <li>AWS</li>
-                <li>Testcontainers</li>
-              </ul>
-            </dd>
-          </div>
-          <div class="group">
-            <dt>Performance</dt>
-            <dd>
-              <ul class="chips">
-                <li>JMeter</li>
-                <li>BlazeMeter</li>
-              </ul>
-            </dd>
-          </div>
-          <div class="group">
-            <dt>Databases</dt>
-            <dd>
-              <ul class="chips">
-                <li>MS SQL Server</li>
-                <li>PostgreSQL</li>
-              </ul>
-            </dd>
-          </div>
-          <div class="group">
-            <dt>Tools</dt>
-            <dd>
-              <ul class="chips">
-                <li>Maven</li>
-                <li>Jira</li>
-                <li>qTest</li>
-                <li>Gerrit</li>
-              </ul>
-            </dd>
-          </div>
-        </dl>
-      </section>
-
-      <section class="section contact" id="contact" aria-labelledby="connect-title">
-        <div class="rail">
-          <p class="rail-num" aria-hidden="true">05</p>
-          <h2 id="connect-title">lets.connect</h2>
-          <p class="rail-note">open to opportunities</p>
-        </div>
-        <div class="contact-body">
-          <p class="contact-line">Want to talk test automation or AI-assisted testing?</p>
-          <p class="contact-sub">Reach out on LinkedIn, or grab my r&eacute;sum&eacute;.</p>
-          <div class="actions">
-            <a class="btn primary" href="https://www.linkedin.com/in/srinivasaimandi/" target="_blank" rel="noopener"
-              >Connect on LinkedIn <span aria-hidden="true">&rarr;</span></a
-            >
-            <a class="btn ghost" href="./resume/Srinivasa_Rao_Imandi_Resume.pdf" download>Download r&eacute;sum&eacute; (PDF)</a>
-            <a class="btn ghost" href="https://github.com/Srinivasaimandi" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="inner footer">
-      <span>&#169; 2023-2026 srinivasaimandi</span>
-      <span>Learn. Progress. Prosper.</span>
-      <a href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
-    </footer>
+        <footer class="footer">
+          <span>&#169; 2023-2026 srinivasaimandi</span>
+          <span>Learn. Progress. Prosper.</span>
+        </footer>
+      </main>
+    </div>
 
     <script>
-      // Highlight the top bar link for the section being read. Without this script
-      // (or in very old browsers) the links simply stay unhighlighted.
+      // Mark the index link for the section being read. Without this script
+      // (or in very old browsers) the index simply stays unmarked.
       (function () {
-        var links = document.querySelectorAll(".sections-nav a");
+        var links = document.querySelectorAll(".index a");
         if (!links.length || !("IntersectionObserver" in window)) return;
         var byId = {};
         links.forEach(function (a) {
@@ -369,49 +269,9 @@
           // a section counts as "being read" when it crosses the upper third of the screen
           { rootMargin: "-30% 0px -60% 0px" }
         );
-        document.querySelectorAll("main > section[id]").forEach(function (section) {
+        document.querySelectorAll(".content > section[id]").forEach(function (section) {
           observer.observe(section);
         });
-      })();
-
-      // The colour wheel in the top bar cycles through the colour themes in style.css.
-      // Each click turns the wheel a quarter, so the current theme's slice sits at the top-right.
-      (function () {
-        var dot = document.querySelector(".theme-toggle");
-        var wheel = dot && dot.querySelector(".wheel");
-        if (!dot) return;
-        var root = document.documentElement;
-        var meta = document.querySelector('meta[name="theme-color"]');
-        var themes = ["cobalt", "violet", "rose", "midnight"];
-        var names = { cobalt: "Cobalt", violet: "Violet", rose: "Rose", midnight: "Midnight" };
-
-        function label() {
-          var current = root.dataset.theme || "cobalt";
-          if (themes.indexOf(current) < 0) current = "cobalt";
-          dot.setAttribute("aria-label", "Colour theme: " + names[current] + ". Click to change");
-          dot.title = "Theme: " + names[current] + " (click to change)";
-          if (meta) meta.content = getComputedStyle(root).getPropertyValue("--bg").trim();
-          return current;
-        }
-
-        // keep counting quarter turns so the wheel always turns the same way
-        var turns = themes.indexOf(label());
-        function turn() {
-          if (wheel) wheel.style.transform = "rotate(" + turns * -90 + "deg)";
-        }
-
-        dot.addEventListener("click", function () {
-          var next = themes[(themes.indexOf(label()) + 1) % themes.length];
-          turns += 1;
-          turn();
-          if (next === "cobalt") delete root.dataset.theme;
-          else root.dataset.theme = next;
-          try {
-            localStorage.setItem("theme", next);
-          } catch (e) {}
-          label();
-        });
-        turn();
       })();
     </script>
   </body>
